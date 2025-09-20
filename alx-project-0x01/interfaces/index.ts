@@ -6,22 +6,35 @@ export interface PostProps {
 }
 
 export interface UserProps {
-    id:       number;
-    name:     string;
+    id: number;
+    name: string;
     username: string;
-    email:    string;
-    address:  Address;
-    phone:    string;
-    website:  string;
-    company:  Company;
+    email: string;
+    address: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: string;
+        geo: {
+            lat: string;
+            lng: string;
+        };
+    };
+    phone: string;
+    website: string;
+    company: {
+        name: string;
+        catchPhrase: string;
+        bs: string;
+    };
 }
 
 export interface Address {
-    street:  string;
-    suite:   string;
-    city:    string;
+    street: string;
+    suite: string;
+    city: string;
     zipcode: string;
-    geo:     Geo;
+    geo: Geo;
 }
 
 export interface Geo {
@@ -30,7 +43,7 @@ export interface Geo {
 }
 
 export interface Company {
-    name:        string;
+    name: string;
     catchPhrase: string;
-    bs:          string;
+    bs: string;
 }
